@@ -1,0 +1,17 @@
+{
+    "dragon_name": {
+        "S": "sparky"
+    },
+    "dragon_type": {
+        "S": "green"
+    },
+    "description": {
+        "S": "breaths acid"
+    },
+    "attack": {
+        "N": "10"
+    },
+    "defense": {
+        "N": "7"
+    }
+}

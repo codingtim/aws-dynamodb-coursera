@@ -1,0 +1,17 @@
+{
+    "dragon_name": {
+        "S": "tallie"
+    },
+    "dragon_type": {
+        "S": "red"
+    },
+    "description": {
+        "S": "breaths fire"
+    },
+    "attack": {
+        "N": "7"
+    },
+    "defense": {
+        "N": "10"
+    }
+}
