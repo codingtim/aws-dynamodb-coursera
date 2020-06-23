@@ -58,4 +58,31 @@ Information about transactions are lost?
 To support Full Text Searching use Streams to push data to ES with a Lambda
 https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-aws-integrations.html#es-aws-integrations-dynamodb-es
 
+Week 4
 
+Optimistic Locking with a Conditional Write 
+PutItem only if not exists
+UpdateItem only if attribute has specific value
+
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/LSI.html
+Secondary Index does not require partition key - sort key to be unique
+Local SI can only be created at table creation time
+Local SI can be read strongly or eventually consistent
+Local SI always contains the base table sort key as attribute
+Local SI can contains other projected attributes or can lookup attributes in base table (with scan??)
+
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GSI.html
+Global SI can be created later
+Global SI is always eventually consistent
+Global SI requires its own capacity unit in provision mode
+Global SI always gets the base table partition key and sort key projected
+Global SI can contains projected attributes but offset data cost vs required
+
+Data in DynamoDB should be stored de-normalized and with the correct LSI to support all queries
+Or even fully single-table and store multiple data sets in 1 table
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-modeling-nosql-B.html
+
+Ever growing data can use a table per Time Serie 
+Example: sales data table per quarter or year 
+
+DynamoDB Accelerator = pay for cache
