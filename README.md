@@ -40,4 +40,22 @@ Global secondary indexes have their own provisioned throughput (in provisioned m
 Put/update/delete to a table also issues put/update/delete to the index
 this consumes write capacity units from the index
 
+Week 3
+
+encryption through KMS
+backups also encrypted
+items are encrypted and attributes can be encrypted or signed
+
+TTL: expired items still show up in search results, use filter to remove them, deleted within 48hours
+
+Global Tables replicates accross Regions with Streams
+
+Stream data is not stored in the DynamoDB Table, but separatel
+Streams are accessed through different endpoint than Tables
+Stream can contain old and new data
+Information about transactions are lost?
+
+To support Full Text Searching use Streams to push data to ES with a Lambda
+https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-aws-integrations.html#es-aws-integrations-dynamodb-es
+
 
